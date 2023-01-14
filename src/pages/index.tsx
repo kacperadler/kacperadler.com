@@ -24,7 +24,12 @@ const Home: NextPage<IAbout> = ({ about }) => {
   return (
     <>
       <Head>
-        <title>👋 Welcome in my universe</title>
+        <title>Welcome in my universe</title>
+        <link
+          rel="icon"
+          // eslint-disable-next-line max-len
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>"
+        />
         <meta name="description" content="👋 Welcome in my universe" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
