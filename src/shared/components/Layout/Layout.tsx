@@ -33,9 +33,9 @@ export const Layout: React.FunctionComponent<ILayout> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {isArticle ? (
-        <article className={robotoMono.className}>{children}</article>
+        <article className={`${robotoMono.className} min-h-screen`}>{children}</article>
       ) : (
-        <main className={robotoMono.className}>{children}</main>
+        <main className={`${robotoMono.className} min-h-screen`}>{children}</main>
       )}
       <Footer />
     </>

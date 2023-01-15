@@ -12,11 +12,7 @@ export const Footer: React.FunctionComponent = () => {
 
   return (
     <footer
-      className={clsx(
-        layout,
-        robotoMono.className,
-        'absolute left-0 right-0 bottom-0 mx-auto flex flex-row justify-between pb-8 dark:text-white'
-      )}>
+      className={clsx(layout, robotoMono.className, 'mx-auto flex flex-row justify-between pb-8 dark:text-white')}>
       <div>{copyright}</div>
       <div></div>
     </footer>
