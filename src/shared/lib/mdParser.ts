@@ -3,6 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 
 export interface GetListData {
   slug: string;
@@ -38,7 +39,7 @@ export const getFileBySlug = async (path: string, slug: string): Promise<GetFile
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
   const { data, content: mdContent } = matter(fileContents);
 
-  const content = mdContent ? await (await remark().use(html).process(mdContent)).toString() : '';
+  const content = mdContent ? await (await remark().use(remarkGfm).use(html).process(mdContent)).toString() : '';
 
   return {
     ...data,

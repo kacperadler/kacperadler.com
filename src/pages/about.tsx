@@ -11,7 +11,7 @@ export interface IAbout {
 }
 
 export const getStaticProps: GetStaticProps<IAbout> = async () => {
-  const about = await getFileBySlug('_informations', 'about');
+  const about = await getFileBySlug('_data/informations', 'about');
 
   return {
     props: {
@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<IAbout> = async () => {
   };
 };
 
-const Home: NextPage<IAbout> = ({ about }) => {
+const About: NextPage<IAbout> = ({ about }) => {
   return (
     <>
       <Head>
@@ -34,11 +34,11 @@ const Home: NextPage<IAbout> = ({ about }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {/* eslint-disable-next-line max-len */}
-      <main className="prose mx-auto max-w-xl px-10 prose-img:mx-auto prose-img:max-w-xs prose-img:rounded-xl dark:prose-invert lg:prose-xl">
+      <main className="prose mx-auto max-w-4xl px-10 text-justify prose-img:mx-auto prose-img:rounded-xl dark:prose-invert lg:prose-xl">
         <div className={robotoMono.className} dangerouslySetInnerHTML={{ __html: about.content }} />
       </main>
     </>
   );
 };
 
-export default Home;
+export default About;
