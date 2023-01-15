@@ -11,7 +11,7 @@ tags:
 
 ### 👋 Hi, I'm Kacper Adler
 
-![Author image](/author/author_250.jpg){: style="float: left"}
+![Author image](/author/author_250.jpg)
 
 I'm a Frontend Developer with a passion for aesthetics and work where visual aspects are important. As you can see, this is not applied to this website. Yet 😏
 
