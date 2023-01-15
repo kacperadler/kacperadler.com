@@ -19,7 +19,7 @@ My adventure in software development started in 2020, in the same year I found m
 
 ### 🤔 What you can find here?
 
-Basically, everything about Frontend development and React itself, sometimes maybe something about WEB3. To be more precise here is a list of examples of topics:
+Basically, everything about Frontend development and React itself, sometimes maybe a piece of knowledge about WEB3. To be more precise here is a list of examples of topics:
 
 - React
 - NEXT.js
