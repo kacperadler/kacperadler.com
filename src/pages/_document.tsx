@@ -4,7 +4,7 @@ import { ENV } from 'shared/config/env';
 
 export default function Document() {
   return (
-    <Html lang="en" className="dark:bg-slate-900">
+    <Html lang="en" className="dark:bg-neutral-900">
       <Head>
         <Script async src={`https://www.googletagmanager.com/gtag/js?id=${ENV.G_TAG}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">

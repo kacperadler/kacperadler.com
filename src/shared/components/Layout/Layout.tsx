@@ -3,8 +3,12 @@ import { Roboto_Mono } from '@next/font/google';
 import Head from 'next/head';
 
 import { Footer } from 'shared/components/Footer';
+import { Header } from '../Header';
+import clsx from 'clsx';
 
 const robotoMono = Roboto_Mono({ weight: '400', subsets: ['latin'] });
+
+export const layout = `${robotoMono} max-w-4xl p-4 mx-auto`;
 
 export interface ILayout extends PropsWithChildren {
   emoji?: any;
@@ -32,10 +36,11 @@ export const Layout: React.FunctionComponent<ILayout> = ({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       {isArticle ? (
-        <article className={`${robotoMono.className} min-h-screen`}>{children}</article>
+        <article className={clsx(layout, 'min-h-screen')}>{children}</article>
       ) : (
-        <main className={`${robotoMono.className} min-h-screen`}>{children}</main>
+        <main className={clsx(layout, 'min-h-screen')}>{children}</main>
       )}
       <Footer />
     </>

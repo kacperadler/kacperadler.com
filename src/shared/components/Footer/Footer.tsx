@@ -1,18 +1,18 @@
-import React, { useMemo } from 'react';
-import { Roboto_Mono } from '@next/font/google';
-import { layout } from 'shared/config/layout';
 import clsx from 'clsx';
-
-const robotoMono = Roboto_Mono({ weight: '400', subsets: ['latin'] });
+import React from 'react';
 
 export const Footer: React.FunctionComponent = () => {
   const year = new Date().getFullYear();
 
-  const copyright = useMemo(() => `Copyright © ${year} | All rights reserved.`, [year]);
+  const copyright = `Copyright © ${year} | All rights reserved.`;
 
   return (
     <footer
-      className={clsx(layout, robotoMono.className, 'mx-auto flex flex-row justify-between pb-8 dark:text-white')}>
+      className={clsx(
+        'mx-auto mt-12 max-w-4xl border-t-2 border-gray-400 p-4 py-6',
+        'flex flex-row justify-between',
+        'dark:text-white'
+      )}>
       <div>{copyright}</div>
       <div></div>
     </footer>

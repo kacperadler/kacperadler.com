@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from 'next';
 
 import { getFileBySlug, GetFileBySlugData } from 'shared/lib/mdParser';
 import { Layout } from 'shared/components/Layout';
-import { layout } from 'shared/config/layout';
 import clsx from 'clsx';
 
 export interface IAbout {
@@ -23,7 +22,11 @@ const About: NextPage<IAbout> = ({ about }) => {
   return (
     <Layout>
       <div
-        className={clsx(layout, 'prose text-justify prose-img:mx-auto prose-img:rounded-xl lg:prose-xl')}
+        className={clsx(
+          'prose dark:prose-invert dark:text-white',
+          'prose-img:mx-auto prose-img:rounded-xl',
+          'text-justify lg:prose-xl'
+        )}
         dangerouslySetInnerHTML={{ __html: about.content }}
       />
     </Layout>
