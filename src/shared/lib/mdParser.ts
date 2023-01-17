@@ -22,7 +22,7 @@ export const getList = (path: string): GetListData[] => {
     const fullPath = join(directory, file);
     const fileContents = fs.readFileSync(fullPath, 'utf-8');
     const { data } = matter(fileContents);
-    console.log(data.date ? Number(new Date(data.date)) : null);
+
     return {
       ...data,
       slug: file.replace('.md', ''),

@@ -40,6 +40,7 @@ const Home: NextPage<IHome> = ({ articles }) => {
                   alt={cover}
                   width={428}
                   height={334}
+                  placeholder="blur"
                   className="hidden rounded-md lg:mr-4 lg:block"
                 />
               ) : null}
