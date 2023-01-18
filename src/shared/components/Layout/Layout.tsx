@@ -8,8 +8,6 @@ import clsx from 'clsx';
 
 const robotoMono = Roboto_Mono({ weight: '400', subsets: ['latin'] });
 
-export const layout = `${robotoMono} max-w-4xl p-4 mx-auto`;
-
 export interface ILayout extends PropsWithChildren {
   emoji?: any;
   title?: string;
@@ -38,9 +36,9 @@ export const Layout: React.FunctionComponent<ILayout> = ({
       </Head>
       <Header />
       {isArticle ? (
-        <article className={clsx(layout, 'min-h-screen')}>{children}</article>
+        <article className={clsx(`${robotoMono} mx-auto max-w-4xl p-4`, 'min-h-screen')}>{children}</article>
       ) : (
-        <main className={clsx(layout, 'min-h-screen')}>{children}</main>
+        <main className={clsx(`${robotoMono} mx-auto max-w-4xl p-4`, 'min-h-screen')}>{children}</main>
       )}
       <Footer />
     </>

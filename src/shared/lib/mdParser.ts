@@ -5,16 +5,17 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 
-export interface GetListData {
+export interface FileData {
   slug: string;
   createdAt: number | null;
   title?: string;
   description?: string;
   cover?: string;
   tags?: string[];
+  content?: string;
 }
 
-export const getList = (path: string): GetListData[] => {
+export const getList = (path: string): FileData[] => {
   const directory = join(process.cwd(), path);
   const files = fs.readdirSync(directory);
 
@@ -31,13 +32,7 @@ export const getList = (path: string): GetListData[] => {
   });
 };
 
-export interface GetFileBySlugData {
-  slug: string;
-  content: string;
-  createdAt: number | null;
-}
-
-export const getFileBySlug = async (path: string, slug: string): Promise<GetFileBySlugData> => {
+export const getFileBySlug = async (path: string, slug: string): Promise<FileData> => {
   const directory = join(process.cwd(), path);
   const fullPath = join(directory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf-8');

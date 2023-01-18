@@ -23,7 +23,7 @@ export const Header: React.FunctionComponent = () => {
             className={clsx(
               'transition duration-300',
               'mx-4 font-semibold text-gray-400',
-              pathname === href && 'text-white underline underline-offset-4'
+              pathname.includes(href) && 'text-white underline underline-offset-4'
             )}>
             {label}
           </Link>
