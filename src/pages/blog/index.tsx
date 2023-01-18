@@ -39,8 +39,8 @@ const Blog: NextPage<IBlog> = ({ articles }) => {
                   <Image
                     src={cover}
                     alt={cover}
-                    width={428}
-                    height={334}
+                    width={400}
+                    height={400}
                     className="hidden rounded-md lg:mr-4 lg:block"
                   />
                 ) : null}
