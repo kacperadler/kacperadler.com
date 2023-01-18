@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
 import { Layout } from 'shared/components/Layout';
 import { getFileBySlug, FileData, getList } from 'shared/lib/mdParser';
@@ -34,13 +35,21 @@ export const getStaticProps: GetStaticProps<IArticle> = async ({ params }) => {
 };
 
 const Article: NextPage<IArticle> = ({ article }) => {
-  const { title, content, description } = article;
+  const { emoji, title, content, description } = article;
 
   return (
-    <Layout>
+    <Layout title={title} emoji={emoji} isArticle>
+      <Head>
+        <link
+          href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-atom-dark.css"
+          rel="stylesheet"
+        />
+      </Head>
       {content ? (
         <div>
-          <h1 className="pb-8 text-5xl font-semibold">{title}</h1>
+          <h1 className="pb-8 text-5xl font-semibold">
+            {emoji} {title}
+          </h1>
           <p className="pb-8 text-justify text-xl text-zinc-200">{description}</p>
 
           <div

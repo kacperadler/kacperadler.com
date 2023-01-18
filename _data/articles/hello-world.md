@@ -1,4 +1,5 @@
 ---
+emoji: 🪐
 title: Welcome to my universe!
 description: Hi, my name is Kacper and I am a programmer, more specifically a Frontend developer from Poland. I became a Frontend developer out of love for aesthetics and work in which visual aspects are important. I want to introduce myself and tell you something more about me, my work, and my future plans.
 cover: /images/article/hello-world.png
@@ -29,7 +30,7 @@ Basically, everything about Frontend development and React itself, sometimes may
 - Useful libraries witch can help you in your projects
 - Frontend basics like HTML, CSS, JavaScript or TypeScript
 
-### 🤓 In the end, let’s grab some knowledge about React
+### 🤓 In the end, let’s grab some knowledge
 
 | What is React?                                                                                         |
 | ------------------------------------------------------------------------------------------------------ |
@@ -42,3 +43,43 @@ Basically, everything about Frontend development and React itself, sometimes may
 | What do I really need to learn to start my adventure with React?                                                           |
 | -------------------------------------------------------------------------------------------------------------------------- |
 | At this moment, you need a basic knowledge of JavaScript and HTML. If you want to add some styles, learn the basics of CSS |
+
+### 💻 And some skills
+
+Go to [CodeSandbox](https://codesandbox.io/), In the top right corner, you can find a create button. Press this button and select a React from template. Rewrite this code snippet to your CodeSandbox. This will help you start your own adventure with React 😎.
+
+```jsx
+import { useState } from 'react'; //import state function
+
+//create component
+const App = () => {
+  const [counter, setCounter] = useState(0); //add state to component
+
+  const addition = () => {
+    //create a addition function
+    setCounter((prevState) => prevState + 1);
+  };
+
+  const subtraction = () => {
+    //create a subtraction function
+    setCounter((prevState) => prevState - 1);
+  };
+
+  //here your component is rendered
+  return (
+    <div>
+      {/*Display current state*/}
+      <h1>Counter: {counter}</h1>
+      <div>
+        {/*Assign a addition function*/}
+        <button onClick={addition}>Add</button>
+
+        {/*Assign a subtraction function*/}
+        <button onClick={subtraction}>Subtract</button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+```

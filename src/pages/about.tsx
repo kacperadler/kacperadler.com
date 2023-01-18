@@ -1,11 +1,11 @@
 import { GetStaticProps, NextPage } from 'next';
 
-import { getFileBySlug, GetFileBySlugData } from 'shared/lib/mdParser';
+import { getFileBySlug, FileData } from 'shared/lib/mdParser';
 import { Layout } from 'shared/components/Layout';
 import clsx from 'clsx';
 
 export interface IAbout {
-  about: GetFileBySlugData;
+  about: FileData;
 }
 
 export const getStaticProps: GetStaticProps<IAbout> = async () => {
@@ -27,7 +27,7 @@ const About: NextPage<IAbout> = ({ about }) => {
           'prose-img:mx-auto prose-img:rounded-xl',
           'text-justify lg:prose-xl'
         )}
-        dangerouslySetInnerHTML={{ __html: about.content }}
+        dangerouslySetInnerHTML={{ __html: about.content ?? '' }}
       />
     </Layout>
   );

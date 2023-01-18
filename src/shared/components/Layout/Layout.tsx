@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({ weight: '400', subsets: ['latin'] });
 export interface ILayout extends PropsWithChildren {
   emoji?: any;
   title?: string;
-  isArticle?: string;
+  isArticle?: boolean;
   description?: string;
 }
 

@@ -16,6 +16,10 @@ export default function Document() {
             gtag('config', '${ENV.G_TAG}');
           `}
         </Script>
+        <link
+          href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-atom-dark.css"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />
