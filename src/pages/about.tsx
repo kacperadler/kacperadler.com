@@ -23,9 +23,9 @@ const About: NextPage<IAbout> = ({ about }) => {
     <Layout>
       <div
         className={clsx(
-          'prose dark:prose-invert dark:text-white',
+          'prose prose-invert',
           'prose-img:mx-auto prose-img:rounded-xl',
-          'text-justify lg:prose-xl'
+          'mx-auto text-justify lg:prose-xl'
         )}
         dangerouslySetInnerHTML={{ __html: about.content ?? '' }}
       />

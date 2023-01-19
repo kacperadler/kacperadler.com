@@ -44,8 +44,8 @@ const Blog: NextPage<IBlog> = ({ articles }) => {
                     className="hidden rounded-md lg:mr-4 lg:block"
                   />
                 ) : null}
-                <div className="prose dark:prose-invert lg:mt-0">
-                  <h3 className="mb-1 text-2xl">{title}</h3>
+                <div className="prose-xl prose-invert lg:mt-0">
+                  <h3 className="mb-1 text-2xl font-semibold">{title}</h3>
                   <p className="mt-0 mb-0 text-slate-500">{createdAt && dateFns.format(createdAt, 'dd MMM yyyy')}</p>
                   <p className="mt-0 text-justify text-lg">{description}</p>
                 </div>

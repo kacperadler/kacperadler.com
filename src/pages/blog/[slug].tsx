@@ -46,20 +46,18 @@ const Article: NextPage<IArticle> = ({ article }) => {
         />
       </Head>
       {content ? (
-        <div>
-          <h1 className="pb-8 text-5xl font-semibold">
+        <div
+          className={clsx(
+            'prose prose-invert',
+            'prose-img:mx-auto prose-img:rounded-xl',
+            'mx-auto text-justify lg:prose-xl'
+          )}>
+          <h1 className="text-center">
             {emoji} {title}
           </h1>
           <p className="pb-8 text-justify text-xl text-zinc-200">{description}</p>
 
-          <div
-            className={clsx(
-              'prose dark:prose-invert dark:text-white',
-              'prose-img:mx-auto prose-img:rounded-xl',
-              'text-justify lg:prose-xl'
-            )}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       ) : null}
     </Layout>
