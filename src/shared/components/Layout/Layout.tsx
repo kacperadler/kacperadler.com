@@ -19,8 +19,8 @@ export const Layout: React.FunctionComponent<ILayout> = ({
   children,
   emoji = '👋',
   isArticle = false,
-  title = 'Welcome in my universe',
-  description = '👋 Welcome in my universe',
+  title = 'Welcome to my universe',
+  description = '👋 Welcome to my universe',
 }) => {
   return (
     <>
