@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import { MEDIA } from './Footer.constants';
 
 export const Footer: React.FunctionComponent = () => {
   const year = new Date().getFullYear();
@@ -14,7 +15,13 @@ export const Footer: React.FunctionComponent = () => {
         'dark:text-white'
       )}>
       <div>{copyright}</div>
-      <div></div>
+      <div className="flex flex-row">
+        {MEDIA.map(({ href, Icon }) => (
+          <a href={href} key={href} target="blank" className={clsx('mx-2 text-2xl', 'transition duration-300')}>
+            <Icon className="hover:rotate-12 hover:text-cyan-400" />
+          </a>
+        ))}
+      </div>
     </footer>
   );
 };
