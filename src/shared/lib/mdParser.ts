@@ -5,9 +5,10 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import prism from 'remark-prism';
+import * as dateFns from 'date-fns';
 export interface FileData {
   slug: string;
-  createdAt: number | null;
+  createdAt: number;
   title?: string;
   emoji?: string;
   description?: string;
@@ -20,7 +21,7 @@ export const getList = (path: string): FileData[] => {
   const directory = join(process.cwd(), path);
   const files = fs.readdirSync(directory);
 
-  return files.map((file) => {
+  const mappedFiles: FileData[] = files.map((file) => {
     const fullPath = join(directory, file);
     const fileContents = fs.readFileSync(fullPath, 'utf-8');
     const { data } = matter(fileContents);
@@ -28,9 +29,15 @@ export const getList = (path: string): FileData[] => {
     return {
       ...data,
       slug: file.replace('.md', ''),
-      createdAt: data.date ? Number(new Date(data.date)) : null,
+      createdAt: Number(new Date(data.date)),
     };
   });
+
+  const sortedFiles = mappedFiles.sort((article1, article2) => {
+    return dateFns.differenceInDays(new Date(article2.createdAt), new Date(article1.createdAt));
+  });
+
+  return sortedFiles;
 };
 
 export const getFileBySlug = async (path: string, slug: string): Promise<FileData> => {
@@ -47,6 +54,6 @@ export const getFileBySlug = async (path: string, slug: string): Promise<FileDat
     ...data,
     slug,
     content,
-    createdAt: data.date ? Number(new Date(data.date)) : null,
+    createdAt: Number(new Date(data.date)),
   };
 };

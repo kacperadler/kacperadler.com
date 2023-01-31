@@ -1,8 +1,8 @@
 ---
 emoji: 🪐
-title: Welcome to my universe!
+title: '#000 Welcome to my universe!'
 description: Hi, my name is Kacper and I am a programmer, more specifically a Frontend developer from Poland. I became a Frontend developer out of love for aesthetics and work in which visual aspects are important. I want to introduce myself and tell you something more about me, my work, and my future plans.
-cover: /images/article/hello-world.png
+cover: /images/article/000-hello-world.png
 date: 01-18-2023
 tags:
   - Kacper Adler
