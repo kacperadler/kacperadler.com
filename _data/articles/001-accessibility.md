@@ -20,7 +20,7 @@ Web accessibility refers to the practice of making websites and applications usa
 
 The importance of accessibility cannot be overstated. By making the web accessible, you are helping to break down barriers that prevent individuals with disabilities from participating fully in the digital world. In addition, accessible websites and applications provide a better user experience for everyone, not just those with disabilities
 
-Web accessibility is governed by guidelines known as the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). These guidelines provide a set of rules for making web content accessible to individuals with disabilities. They cover a wide range of topics, including color contrast, keyboard accessibility, alt text for images, and more
+Web accessibility is managed by guidelines known as the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). These guidelines provide a set of rules for making web content accessible to individuals with disabilities. They cover a wide range of topics, including color contrast, keyboard accessibility, alt text for images, and more
 
 ### 🤓 Best Practices for Accessible Frontend Development
 
@@ -42,7 +42,7 @@ By implementing these best practices, you can ensure that your website or applic
 
 ### 🧪 Testing and Validation for Accessibility
 
-Testing and validation are crucial steps in ensuring the accessibility of your website or application. We will explore the importance of testing for accessibility and the tools and best practices for validating accessibility
+Testing and validation are crucial steps in ensuring the accessibility of your website or application
 
 #### 1. Importance of Testing for Accessibility
 
@@ -66,4 +66,4 @@ In addition to using accessibility testing tools, there are several best practic
 - Involving individuals with disabilities in the testing process
 - Regularly monitoring and updating your website or application to ensure accessibility is maintained
 
-By following these best practices, you can ensure a high-quality user experience for all users and meet the accessibility guidelines outlined by the WCAG
+By following these practices, you can ensure a high-quality user experience for all users and meet the accessibility guidelines outlined by the WCAG
